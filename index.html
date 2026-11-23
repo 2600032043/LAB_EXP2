@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="City Care Hospital patient appointment management website for hospital services, doctor information and appointment booking.">
+  <meta name="author" content="Manasvi Mishra">
+  <title>City Care Hospital | Patient Appointment Management</title>
+
+  <link rel="stylesheet" href="labexpt2.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <h1>City Care Hospital</h1>
+    <p class="tagline">Quality healthcare and patient-centred services.</p>
+  </header>
+
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="#services" aria-current="page">Hospital Services</a></li>
+      <li><a href="#doctors">Our Doctors</a></li>
+      <li><a href="#appointment">Patient Appointment</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <section id="services" aria-labelledby="services-heading">
+      <h2 id="services-heading">Hospital Services</h2>
+      <p>City Care Hospital provides a wide range of medical services for patients of all age groups.</p>
+
+      <ul>
+        <li>General Medicine</li>
+        <li>Cardiology</li>
+        <li>Orthopaedics</li>
+        <li>Paediatrics</li>
+        <li>Dermatology</li>
+      </ul>
+    </section>
+
+    <section id="doctors" aria-labelledby="doctors-heading">
+      <h2 id="doctors-heading">Our Doctors</h2>
+
+      <article class="doctor-card">
+        <h3>Dr. A Sharma</h3>
+        <p><strong>Specialisation:</strong> Cardiologist</p>
+        <p><strong>Experience:</strong> 12 years</p>
+      </article>
+
+      <article class="doctor-card">
+        <h3>Dr. R Verma</h3>
+        <p><strong>Specialisation:</strong> Orthopaedic Surgeon</p>
+        <p><strong>Experience:</strong> 10 years</p>
+      </article>
+    </section>
+
+    <section id="appointment" aria-labelledby="appointment-heading">
+      <h2 id="appointment-heading">Patient Appointment</h2>
+      <p>Complete the form below to book an appointment. Fields marked with <abbr title="required">required</abbr> must be completed.</p>
+
+      <form action="#" method="post" novalidate>
+        <fieldset>
+          <legend>Patient details</legend>
+
+          <div class="form-field">
+            <label for="patient-name">Full name <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="patient-name"
+              name="patientName"
+              autocomplete="name"
+              required
+              aria-required="true">
+          </div>
+
+          <div class="form-field">
+            <label for="patient-email">Email address <span aria-hidden="true">*</span></label>
+            <input
+              type="email"
+              id="patient-email"
+              name="patientEmail"
+              autocomplete="email"
+              required
+              aria-required="true"
+              aria-describedby="email-help">
+            <p id="email-help" class="hint">Enter a valid email address for appointment confirmation.</p>
+          </div>
+
+          <div class="form-field">
+            <label for="patient-phone">Phone number <span aria-hidden="true">*</span></label>
+            <input
+              type="tel"
+              id="patient-phone"
+              name="patientPhone"
+              autocomplete="tel"
+              pattern="[0-9]{10}"
+              required
+              aria-required="true"
+              aria-describedby="phone-help">
+            <p id="phone-help" class="hint">Enter a 10-digit mobile number.</p>
+          </div>
+
+          <div class="form-field">
+            <label for="department">Department <span aria-hidden="true">*</span></label>
+            <select id="department" name="department" required aria-required="true">
+              <option value="">Select a department</option>
+              <option value="general-medicine">General Medicine</option>
+              <option value="cardiology">Cardiology</option>
+              <option value="orthopaedics">Orthopaedics</option>
+              <option value="paediatrics">Paediatrics</option>
+              <option value="dermatology">Dermatology</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="appointment-date">Preferred appointment date <span aria-hidden="true">*</span></label>
+            <input
+              type="date"
+              id="appointment-date"
+              name="appointmentDate"
+              required
+              aria-required="true">
+          </div>
+
+          <div class="form-field">
+            <label for="message">Additional message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              aria-describedby="message-help"></textarea>
+            <p id="message-help" class="hint">Optional: describe symptoms or provide additional information.</p>
+          </div>
+        </fieldset>
+
+        <button type="submit">Book appointment</button>
+      </form>
+    </section>
+
+    <aside aria-labelledby="support-heading">
+      <h2 id="support-heading">Appointment support</h2>
+      <p>For appointment-related support, contact the hospital reception at <a href="tel:+911234567890">+91 12345 67890</a>.</p>
+    </aside>
+  </main>
+
+  <footer id="contact">
+    <h2>Contact information</h2>
+    <p>&copy; 2026 City Care Hospital</p>
+    <p>
+      <a href="mailto:appointments@citycarehospital.com">Email the appointment desk</a> |
+      <a href="#main-content">Back to top</a>
+    </p>
+  </footer>
+</body>
+</html>
